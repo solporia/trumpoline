@@ -65,6 +65,11 @@
           "id": "OZkuUuAarbB2",
           "name": "trumpoline-trumponli.png",
           "filePath": "../public/plasmic/trumpoline/images/trumpolineTrumponlipng.png"
+        },
+        {
+          "id": "EUeQjrbPpDcm",
+          "name": "trumpoline.png",
+          "filePath": "../public/plasmic/trumpoline/images/trumpolinepng.png"
         }
       ],
       "indirect": false,

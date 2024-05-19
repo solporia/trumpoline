@@ -59,6 +59,8 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import { PlasmicHead } from "@plasmicapp/react-web";
+
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import projectcss from "./plasmic.module.css"; // plasmic-import: etNqnAJFJE6cKXywQ4f3F8/projectcss
@@ -80,6 +82,7 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
+  pageMetadataOverride?: Flex__<typeof PlasmicHead>;
   section?: Flex__<"section">;
   h1?: Flex__<"h1">;
   h4?: Flex__<"h4">;
@@ -121,7 +124,20 @@ function PlasmicHomepage__RenderFunc(props: {
 
   return (
     <React.Fragment>
-      <Head></Head>
+      <Head>
+        <meta name="twitter:card" content="summary" />
+        <title key="title">{PlasmicHomepage.pageMetadata.title}</title>
+        <meta
+          key="og:title"
+          property="og:title"
+          content={PlasmicHomepage.pageMetadata.title}
+        />
+        <meta
+          key="twitter:title"
+          name="twitter:title"
+          content={PlasmicHomepage.pageMetadata.title}
+        />
+      </Head>
 
       <style>{`
         body {
@@ -144,6 +160,15 @@ function PlasmicHomepage__RenderFunc(props: {
             sty.root
           )}
         >
+          <PlasmicHead
+            data-plasmic-name={"pageMetadataOverride"}
+            data-plasmic-override={overrides.pageMetadataOverride}
+            className={classNames("__wab_instance", sty.pageMetadataOverride)}
+            description={"trampoline on sol and pump.fun"}
+            image={"/plasmic/trumpoline/images/trumpolinepng.png"}
+            title={"Trumpoline on SOL"}
+          />
+
           <section
             data-plasmic-name={"section"}
             data-plasmic-override={overrides.section}
@@ -266,7 +291,8 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "section", "h1", "h4", "h3"],
+  root: ["root", "pageMetadataOverride", "section", "h1", "h4", "h3"],
+  pageMetadataOverride: ["pageMetadataOverride"],
   section: ["section", "h1", "h4", "h3"],
   h1: ["h1"],
   h4: ["h4"],
@@ -277,6 +303,7 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  pageMetadataOverride: typeof PlasmicHead;
   section: "section";
   h1: "h1";
   h4: "h4";
@@ -343,6 +370,7 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    pageMetadataOverride: makeNodeComponent("pageMetadataOverride"),
     section: makeNodeComponent("section"),
     h1: makeNodeComponent("h1"),
     h4: makeNodeComponent("h4"),
@@ -354,7 +382,7 @@ export const PlasmicHomepage = Object.assign(
 
     // Page metadata
     pageMetadata: {
-      title: "",
+      title: "Trumpoline on sol",
       description: "",
       ogImageSrc: "",
       canonical: ""

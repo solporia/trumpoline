@@ -243,12 +243,12 @@ function PlasmicHomepage__RenderFunc(props: {
               <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img___0Lxi7)}
-                displayHeight={"auto"}
+                displayHeight={"50%"}
                 displayMaxHeight={"none"}
                 displayMaxWidth={"100%"}
                 displayMinHeight={"0"}
                 displayMinWidth={"0"}
-                displayWidth={"80%"}
+                displayWidth={"auto"}
                 loading={"lazy"}
                 src={{
                   src: "/plasmic/trumpoline/images/trumpolineTrumponlipng.png",

@@ -1,0 +1,106 @@
+{
+  "platform": "nextjs",
+  "code": {
+    "lang": "ts",
+    "scheme": "blackbox",
+    "reactRuntime": "classic"
+  },
+  "style": {
+    "scheme": "css-modules",
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+  },
+  "images": {
+    "scheme": "public-files",
+    "publicDir": "../public",
+    "publicUrlPrefix": "/"
+  },
+  "tokens": {
+    "scheme": "theo",
+    "tokensFilePath": "plasmic-tokens.theo.json"
+  },
+  "srcDir": "components",
+  "defaultPlasmicDir": "./plasmic",
+  "projects": [
+    {
+      "projectId": "etNqnAJFJE6cKXywQ4f3F8",
+      "projectApiToken": "X2yCJI4IePHIH04PefSlZZon0nAPSonMs9bx5NSGPJXumbRMGrZ5T0vl8P3MKVDB6X5pIfqCzrTqciTUGxwg",
+      "projectName": "trumpoline",
+      "version": "latest",
+      "cssFilePath": "plasmic/trumpoline/plasmic.module.css",
+      "components": [
+        {
+          "id": "HtbCXt-sjrKD",
+          "name": "Homepage",
+          "type": "managed",
+          "projectId": "etNqnAJFJE6cKXywQ4f3F8",
+          "renderModuleFilePath": "plasmic/trumpoline/PlasmicHomepage.tsx",
+          "importSpec": {
+            "modulePath": "../pages/index.tsx"
+          },
+          "cssFilePath": "plasmic/trumpoline/PlasmicHomepage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/"
+        }
+      ],
+      "icons": [
+        {
+          "id": "wZfLx1XQN9k5",
+          "name": "Twitter2SvgrepoComsvgIcon",
+          "moduleFilePath": "plasmic/trumpoline/icons/PlasmicIcon__Twitter2SvgrepoComsvg.tsx"
+        },
+        {
+          "id": "-QtpEagVguTZ",
+          "name": "TelegramSvgrepoComsvgIcon",
+          "moduleFilePath": "plasmic/trumpoline/icons/PlasmicIcon__TelegramSvgrepoComsvg.tsx"
+        }
+      ],
+      "images": [
+        {
+          "id": "QhWukVgpQlGJ",
+          "name": "amercian.gif",
+          "filePath": "../public/plasmic/trumpoline/images/amerciangif.gif"
+        },
+        {
+          "id": "OZkuUuAarbB2",
+          "name": "trumpoline-trumponli.png",
+          "filePath": "../public/plasmic/trumpoline/images/trumpolineTrumponlipng.png"
+        }
+      ],
+      "indirect": false,
+      "globalContextsFilePath": "",
+      "splitsProviderFilePath": "",
+      "codeComponents": [
+        {
+          "id": "TfSe5z-rU6HR",
+          "name": "PlasmicHead",
+          "displayName": "hostless-plasmic-head",
+          "componentImportPath": "@plasmicapp/react-web"
+        },
+        {
+          "id": "E_B-PV8b08nT",
+          "name": "Fetcher",
+          "displayName": "plasmic-data-source-fetcher",
+          "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
+        }
+      ],
+      "customFunctions": []
+    }
+  ],
+  "globalVariants": {
+    "variantGroups": [
+      {
+        "id": "kiKmzwfBei8T",
+        "name": "Screen",
+        "projectId": "etNqnAJFJE6cKXywQ4f3F8",
+        "contextFilePath": "plasmic/trumpoline/PlasmicGlobalVariant__Screen.tsx"
+      }
+    ]
+  },
+  "wrapPagesWithGlobalContexts": true,
+  "nextjsConfig": {
+    "pagesDir": "../pages"
+  },
+  "cliVersion": "0.1.330",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.330/dist/plasmic.schema.json"
+}

@@ -242,7 +242,9 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.link__dbcRk
                     )}
                     component={Link}
+                    href={"https://t.me/trumpoline_sol"}
                     platform={"nextjs"}
+                    target={"_blank"}
                   >
                     <TelegramSvgrepoComsvgIcon
                       className={classNames(projectcss.all, sty.svg__qq3Dk)}
@@ -256,7 +258,11 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.link__oeAc9
                     )}
                     component={Link}
+                    href={
+                      "https://x.com/trumpoline_sol?t=vKcmQDzFERGOerqOxcVsGg&s=09"
+                    }
                     platform={"nextjs"}
+                    target={"_blank"}
                   >
                     <Twitter2SvgrepoComsvgIcon
                       className={classNames(projectcss.all, sty.svg__hq94Q)}
